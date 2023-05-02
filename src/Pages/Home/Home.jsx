@@ -13,7 +13,7 @@ const Home = () => {
       .then((data) => setChefsProfile(data));
   }, []);
     return (
-       <div>
+       <div className='bg-cyan-950'>
  <div className="relative">
         <img
           src={banner}
@@ -40,7 +40,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='mt-5'>
+      <div className='mt-5 '>
 <div>
   <h2 className='font-bold text-2xl'>The Korean chefs leading a new era in Seoul's dining scene</h2>
 </div>
@@ -60,6 +60,12 @@ const Home = () => {
           )
         }
         </div>
+      </div>
+
+      <div>
+        <h2>Our Shop</h2>
+        <h3>Our All Delicious & Tasty
+Product</h3>
       </div>
 
 
