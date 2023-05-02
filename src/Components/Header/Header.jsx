@@ -31,7 +31,7 @@ const Header = () => {
                 <NavLink
                   className={`font-medium ${(isActive) =>
                     isActive ? "text-red-600" : undefined}`}
-                  to={`/home`}
+                  to={`/`}
                 >
                  Home
                 </NavLink>
@@ -135,7 +135,7 @@ const Header = () => {
                           <NavLink
                             className={`font-medium ${(isActive) =>
                               isActive ? "text-red-600" : undefined}`}
-                            to={`/home`}
+                            to={`/`}
                           >
                             Home
                           </NavLink>
