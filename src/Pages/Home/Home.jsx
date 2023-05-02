@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import banner from "../../assets/banner1.jpg"
+import Chefs from '../Chefs/Chefs';
+
 
 const Home = () => {
+
+  const [chefsProfile,setChefsProfile]=useState([])
+  
+  useEffect(() => {
+    fetch("http://localhost:5000/chefs")
+      .then((response) => response.json())
+      .then((data) => setChefsProfile(data));
+  }, []);
     return (
-        <div className="relative">
+       <div>
+ <div className="relative">
         <img
           src={banner}
           className="absolute inset-0 object-cover w-full h-full"
@@ -28,6 +39,32 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div className='mt-5'>
+<div>
+  <h2 className='font-bold text-2xl'>The Korean chefs leading a new era in Seoul's dining scene</h2>
+</div>
+
+        <div className='grid grid-cols-3 gap-5'>
+
+        {
+          chefsProfile.map(
+            chef=> <Chefs
+            key={chef.id}
+              chef={chef}
+              
+            >
+
+              
+            </Chefs>
+          )
+        }
+        </div>
+      </div>
+
+
+
+       </div>
     );
 };
 
