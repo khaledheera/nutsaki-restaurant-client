@@ -17,7 +17,7 @@ import app from '../Firebase/firebase.config';
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
-const UserContextProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 	const [loading, setLoading] = useState(true);
 	const githubProvider = new GithubAuthProvider();
@@ -100,4 +100,4 @@ const UserContextProvider = ({ children }) => {
 	return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };
 
-export default UserContextProvider;
+export default  AuthProvider;
