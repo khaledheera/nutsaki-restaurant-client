@@ -5,6 +5,7 @@ import LogIn from "../Pages/LogIn/logIn";
 import Register from "../Pages/Register/Register";
 import ViewRecipes from "../Pages/ViewRecipes/ViewRecipes";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 export const router = createBrowserRouter([
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: '/recipes/:id',
-				element: <ViewRecipes />,
+				element:<PrivateRoutes><ViewRecipes/></PrivateRoutes>,
                 loader:({params})=>fetch(`http://localhost:5000/chefs/${params.id}`)
 			},
         ]
