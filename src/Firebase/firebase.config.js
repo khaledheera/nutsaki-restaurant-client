@@ -5,13 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDNC73PQ1xcUdlHs7kLmimzAHxey8SRhQ8",
-  authDomain: "nutsaki-restaurant.firebaseapp.com",
-  projectId: "nutsaki-restaurant",
-  storageBucket: "nutsaki-restaurant.appspot.com",
-  messagingSenderId: "629163257281",
-  appId: "1:629163257281:web:f42f9f86df2fe88502d340"
+	apiKey:import.meta.env.VITE_apiKey,
+	authDomain:import.meta.env.VITE_authDomain,
+	projectId: import.meta.VITE_projectId,
+	storageBucket: import.meta.env.VITE_storageBucket,
+	messagingSenderId:import.meta.env.VITE_messagingSenderId,
+	appId: import.meta.env.VITE_appId,
 };
+ console.log(import.meta.env.VITE_apiKey);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

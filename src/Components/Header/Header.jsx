@@ -11,12 +11,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
-  function toggleDarkMode() {
-    setDarkMode((prevDarkMode) => !prevDarkMode);
-  }
+  
 
   return (
-    <nav className="bg-cyan-900">
+    <nav className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 ">
       <div className="mb-[210px] lg:mb-0 ">
         <div className="px-4 py-5 mx-auto  md:px-24 lg:px-10">
           <div className="relative flex items-center justify-between">
@@ -29,7 +27,7 @@ const Header = () => {
             <ul className=" items-center hidden space-x-8 lg:flex">
               <li>
                 <NavLink
-                  className={`font-medium ${(isActive) =>
+                  className={`font-medium text-white ${(isActive) =>
                     isActive ? "text-red-600" : undefined}`}
                   to={`/`}
                 >
@@ -86,7 +84,7 @@ const Header = () => {
                       className="tooltip tooltip-bottom tooltip-info"
                       data-tip={user?.displayName}
                     >
-                      <FaUserAlt className="w-6 h-6" />
+                      <FaUserAlt className="w-6 h-6 text-white" />
                     </div>
                   )}
                 </Link>

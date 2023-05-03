@@ -115,7 +115,7 @@ const Register = () => {
 
 	return (
 		<div className="register-comp p-10 md:p-20 ">
-			<div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
+			<div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-rose-400 ">
 				<h1 className="text-2xl font-bold text-center">Register !!!</h1>
 				<form onSubmit={handleSubmit} className="space-y-6 ng- ">
 					<div className="space-y-1 text-sm">

@@ -106,7 +106,7 @@ const LogIn = () => {
 	return (
 		<div className="mb-5 login-comp p-10 md:p-20 ">
 			
-			<div className="w-full max-w-md p-6 m-auto mx-auto   rounded-md shadow-md bg-gray-800 ">
+			<div className="w-full max-w-md p-6 m-auto mx-auto   rounded-md shadow-md bg-rose-400 ">
 
 				{errors && <p className="text-center text-xl my-3 text-red-600">{errors}</p>}
 				<h2 className="mb-3 text-3xl font-semibold text-center text-white">Login to your account</h2>
@@ -170,13 +170,13 @@ const LogIn = () => {
 				<div className="my-6 space-y-4">
 					<button
 						onClick={handleGoogleSignIn}
-						className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400 hover:bg-purple-700 duration-500">
+						className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 bg-blue-500 rounded-md hover:bg-blue-400 duration-500 focus:bg-blue-400 focus:outline-none ">
 						<FaGoogle className="w-5 h-5 " />
 						<p>Login with Google</p>
 					</button>
 					<button
 						onClick={handleGithubSignIn}
-						className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400 hover:bg-purple-700 duration-500">
+						className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 bg-blue-500 rounded-md hover:bg-blue-400 duration-500 focus:bg-blue-400 focus:outline-none">
 						<FaGithub className="w-6 h-6 " />
 						<p>Login with GitHub</p>
 					</button>

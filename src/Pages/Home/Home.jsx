@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import banner from "../../assets/banner1.jpg";
 import Chefs from "../Chefs/Chefs";
+
 import carousel1 from "../../assets/kebab-platter-with-grilled-chicken-lula-kebab-ribs-kebab-grilled-peppers.jpg";
 import carousel2 from "../../assets/cheesy-tokbokki-korean-traditional-food-black-board-background-lunch-dish.jpg";
 import carousel3 from "../../assets/grilled-pork-served-with-sauce-korean-style.jpg";
@@ -29,7 +30,7 @@ const Home = () => {
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-48">
             <div className="flex flex-col items-center justify-between xl:flex-row">
               <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none text-red-400">
+                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight  sm:text-4xl sm:leading-none text-rose-600">
                   Cook Easy With <br className="hidden md:block" />
                   With The <span className="text-teal-accent-400">Recipe</span>
                 </h2>
@@ -44,9 +45,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" bg-[#111827] px-10 py-10 ">
+      <div className=" bg-[#111827] px-14 py-10 ">
         <div>
-          <h2 className="font-bold text-2xl text-center text-red-400">
+          <h2 className="font-bold text-2xl text-center text-rose-600">
             The Korean chefs leading a new era in Seoul's dining scene
           </h2>
         </div>
@@ -59,65 +60,66 @@ const Home = () => {
       </div>
 
       <div className="bg-[#111827]  px-10 py-10">
-        <h2 className="font-bold text-2xl text-center text-rose-500">Our Shop</h2>
-        <h3 className="text-center font-semibold text-white">
+        <h2 className="font-bold text-3xl text-center text-rose-600">Our Shop</h2>
+        <h3 className="text-center font-semibold text-white text-2xl mt-6 p-10">
           Our All Delicious & Tasty Product
         </h3>
         <div className="">
-          <div className="w-full carousel  rounded-box ">
-            <div className="carousel-item w-full">
-              <img
-                src={carousel5}
-                className="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div className="carousel-item w-full">
-              <img
-                src={carousel6}
-                className="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div className="carousel-item w-full">
-              <img
-                src={carousel2}
-                className="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div className="carousel-item w-full">
-              <img
-                src={carousel3}
-                className="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div className="carousel-item w-full">
-              <img
-                src={carousel4}
-                className="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div className="carousel-item w-full">
-              <img
-                src={carousel5}
-                className="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div className="carousel-item w-full">
-              <img
-                src={carousel1}
-                className="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-          </div>
+         
+        <div className="carousel w-full rounded-box">
+  <div id="slide1" className="carousel-item relative w-full">
+    <img src={carousel2} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide4" className="btn btn-circle">❮</a> 
+      <a href="#slide2" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" className="carousel-item relative w-full">
+    <img src={carousel3} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" className="btn btn-circle">❮</a> 
+      <a href="#slide3" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" className="carousel-item relative w-full">
+    <img src={carousel4} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" className="btn btn-circle">❮</a> 
+      <a href="#slide3" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" className="carousel-item relative w-full">
+    <img src={carousel5} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" className="btn btn-circle"> ❮ </a> 
+      <a href="#slide3" className="btn btn-circle"> ❯ </a>
+    </div>
+  </div> 
+  
+  <div id="slide3" className="carousel-item relative w-full">
+    <img src={carousel6} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide2" className="btn btn-circle">❮</a> 
+      <a href="#slide4" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide4" className="carousel-item relative w-full">
+    <img src={carousel1} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide3" className="btn btn-circle">❮</a> 
+      <a href="#slide1" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+</div>
+
+
+
         </div>
 
-        <div className="bg-gray-900 bg-opacity-75 inset-0 px-10 py-10">
+       
+      </div>
+<div>
+<div className="bg-gray-900 bg-opacity-75 inset-0 px-10 py-10">
           <h2 className="font-bold text-5xl text-center mt-10 text-amber-300">
             Get 25% Discount
           </h2>
@@ -130,8 +132,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </div>
-
+</div>
 
     </div>
   );

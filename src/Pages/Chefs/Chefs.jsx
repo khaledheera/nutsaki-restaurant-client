@@ -8,7 +8,7 @@ const Chefs = ({chef}) => {
     return (
         <div className="card w-96 glass">
   <figure><img src={chef.chefPicture} alt="car!"/></figure>
-  <div className="card-body">
+  <div className="card-body text-white">
     <h2 className="card-title text-center">{chef.chefName}</h2>
     <p><span className='font-bold'>Experience:</span>{chef.yearsOfExperience} Years</p>
     <p><span className='font-bold'>Numbers of recipes:</span>{chef.numbersOfRecipes}</p>
