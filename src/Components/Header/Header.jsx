@@ -16,13 +16,13 @@ const Header = () => {
   }
 
   return (
-    <nav className={darkMode ? "dark-mode" : "light-mode"}>
+    <nav className="bg-cyan-900">
       <div className="mb-[210px] lg:mb-0 ">
         <div className="px-4 py-5 mx-auto  md:px-24 lg:px-10">
           <div className="relative flex items-center justify-between">
             <Link to="/" className="inline-flex items-center">
               <img src={logo} alt="" className="w-10 h-10 rounded-full" />
-              <span className="text-2xl font-extrabold ml-5 text-slate-800 uppercase italic">
+              <span className="text-2xl font-extrabold ml-5 text-rose-600 uppercase italic">
                 NUTSAKI
               </span>
             </Link>
@@ -38,7 +38,7 @@ const Header = () => {
               </li>
 
               <li>
-                <NavLink to="/blogs" title="Blog" className="font-medium ">
+                <NavLink to="/blogs" title="Blog" className="font-medium text-white">
                   Blog
                 </NavLink>
               </li>
@@ -48,7 +48,7 @@ const Header = () => {
                   <Link>
                     <button
                       onClick={logOut}
-                      className="inline-flex items-center justify-center h-12 px-6 font-medium   transition duration-200 rounded shadow-md bg-gradient-to-tr from-gray-900 via-purple-900 to-violet-600  focus:shadow-outline focus:outline-none"
+                      className="inline-flex items-center justify-center h-12 px-6 font-medium   transition duration-200 rounded shadow-md bg-gradient-to-trfrom-slate-900 via-rose-900 to-slate-900  focus:shadow-outline focus:outline-none text-white"
                       title="Log Out"
                     >
                       Log Out
@@ -57,7 +57,7 @@ const Header = () => {
                 ) : (
                   <Link to={"/login"}>
                     <button
-                      className="inline-flex items-center justify-center h-12 px-6 font-medium  transition duration-200 rounded shadow-md bg-gradient-to-tr from-gray-900 via-purple-900 to-violet-600 focus:shadow-outline focus:outline-none"
+                      className="inline-flex items-center justify-center h-12 px-6 font-medium  transition duration-200 rounded shadow-md bg-gradient-to-tr from-slate-900 via-rose-900 to-slate-900 focus:shadow-outline focus:outline-none text-white"
                       title="Login"
                     >
                       Login
