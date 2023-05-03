@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import"./Login.css"
 
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { AuthContext } from '../../Providers/AuthProvider';
