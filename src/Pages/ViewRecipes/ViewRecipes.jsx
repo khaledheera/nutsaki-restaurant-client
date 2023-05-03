@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { AiFillLike } from 'react-icons/ai';
+import { toast } from 'react-hot-toast';
 
 const ViewRecipes = () => {
+  const [fav,setFav]=useState(true)
+  const [fav2,setFav2]=useState(true)
+  const [fav3,setFav3]=useState(true)
+//  
 
 const {id}=useParams();
 const recipes=useLoaderData()
@@ -31,8 +36,12 @@ console.log(recipes);
     <p><span className='font-bold'>Ingredients:</span>{recipes.ingredients1}</p>
     <p><span className='font-bold'>Cooking Method:</span>{recipes.cookingMethod1}</p>
     <p><span className='font-bold'> Rating:</span>{recipes.rating1}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Favorite</button>
+    <div  className={`card-actions justify-end ${fav?"block":"hidden"}`}>
+      <button onClick={()=>{
+        toast.success('This Recipe is My fav')
+        setFav(false)
+      
+      }} className="btn btn-primary">Favorite</button>
     </div>
   </div>
 </div>
@@ -42,8 +51,12 @@ console.log(recipes);
     <p><span className='font-bold'>Ingredients:</span>{recipes.ingredients2}</p>
     <p><span className='font-bold'>Cooking Method:</span>{recipes.cookingMethod2}</p>
     <p><span className='font-bold'> Rating:</span>{recipes.rating2}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Favorite</button>
+    <div  className={`card-actions justify-end ${fav2?"block":"hidden"}`}>
+      <button onClick={()=>{
+        toast.success('This Recipe is My fav')
+        setFav2(false)
+      
+      }} className="btn btn-primary">Favorite</button>
     </div>
   </div>
 </div>
@@ -53,8 +66,12 @@ console.log(recipes);
     <p><span className='font-bold'>Ingredients:</span>{recipes.ingredients3}</p>
     <p><span className='font-bold'>Cooking Method:</span>{recipes.cookingMethod3}</p>
     <p><span className='font-bold'> Rating:</span>{recipes.rating3}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Favorite</button>
+    <div  className={`card-actions justify-end ${fav3?"block":"hidden"}`}>
+      <button onClick={()=>{
+        toast.success('This Recipe is My fav')
+        setFav3(false)
+      
+      }} className="btn btn-primary">Favorite</button>
     </div>
   </div>
 </div>
