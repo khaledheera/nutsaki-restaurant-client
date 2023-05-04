@@ -15,9 +15,10 @@ const Blog = () => {
 								<FaDownload />
 							</button>
 						)}
+            
 					</Pdf>
-
-
+          <div ref={ref}>
+              
       <h2 className="font-bold Text-2xl p-5">
         1.Differences between uncontrolled and controlled components.
       </h2>
@@ -39,6 +40,10 @@ const Blog = () => {
        
       </p>
 
+            </div>
+
+
+
       </div>
       <div className="border  p-5 shadow">
       <Pdf targetRef={ref} filename="ph.pdf">
@@ -49,6 +54,7 @@ const Blog = () => {
 						)}
 					</Pdf>
 
+      <div ref={ref}>
       <h2 className="font-bold Text-2xl p-5">
           2.How to validate React props using PropTypes
         </h2>
@@ -70,6 +76,7 @@ const Blog = () => {
           should be an object that could be one of many types.
         </p>
       </div>
+      </div>
         <div className="border  p-5 shadow">
         <Pdf targetRef={ref} filename="ph.pdf">
 						{({ toPdf }) => (
@@ -78,11 +85,13 @@ const Blog = () => {
 							</button>
 						)}
 					</Pdf>
-        <h2 className="font-bold Text-2xl p-5">3.	Tell us the difference between nodejs and express js.</h2>
+       <div ref={ref}>
+       <h2 className="font-bold Text-2xl p-5">3.	Tell us the difference between nodejs and express js.</h2>
 
 <p>Node.js is a run-time environment created to run JavaScript on the server side.
 
 Express.js is a framework for Node.js, so in order to use it, you will use Node.js anyway. Express.js will help you organize your application better. It provides many features which will speed up the development for example mechanism for middlewares, more efficient REST support or robust routing</p>
+       </div>
 
         </div>
 <div className="border  p-5 shadow">
@@ -94,11 +103,13 @@ Express.js is a framework for Node.js, so in order to use it, you will use Node.
 						)}
 					</Pdf>
 
+<div ref={ref}>
 <h2 className="font-bold Text-2xl p-5">4.	What is a custom hook, and why will you create a custom hook?</h2>
 <p> React hooks are functions that let you use and interact with state in React function components. React comes with a few built-in hooks, the foremost commonly used ones being useState, useRef, and useEffect. The previous two are used to store data across renders, whereas the last mentioned is used to execute side effects when that data changes. <br/>
 
 We can also build our own hooks using the built-in hooks as building blocks. These are often referred to as “custom hooks” to differentiate them from the built-in hooks. In my experience, custom hooks are the most underused React abstraction. Developers who are newer to React can struggle to understand how to build custom hooks or when to use them. This post will focus on answering those questions.
 </p>
+</div>
 </div>
     </div>
   );
