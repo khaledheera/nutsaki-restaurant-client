@@ -115,7 +115,7 @@ const Register = () => {
 
 	return (
 		<div className="register-comp p-10 md:p-20 ">
-			<div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-rose-400 ">
+			<div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-gradient-to-tr from-slate-900 via-rose-900 to-slate-900 text-yellow-100 ">
 				<h1 className="text-2xl font-bold text-center">Register !!!</h1>
 				<form onSubmit={handleSubmit} className="space-y-6 ng- ">
 					<div className="space-y-1 text-sm">
@@ -171,7 +171,7 @@ const Register = () => {
 						</span>
 					</div>
 					{errors.password && <p className="text-red-600">{errors.password}</p>}
-					<button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400 hover:bg-violet-700 duration-500 hover:text-white">
+					<button className="block w-full p-3 text-center rounded-sm flex mt-10 items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400 hover:bg-purple-700 duration-500duration-500 hover:text-white">
 						Register
 					</button>
 					{errors.general && <p className="text-center text-red-600">{errors.general}</p>}

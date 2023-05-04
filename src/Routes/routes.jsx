@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
 			{
 				path: '/recipes/:id',
 				element:<PrivateRoutes><ViewRecipes/></PrivateRoutes>,
-                loader:({params})=>fetch(`http://localhost:5000/chefs/${params.id}`)
+                loader:({params})=>fetch(`https://nutsaki-restaurant-server-khaledheera.vercel.app/chefs/${params.id}`)
 			},
             {
                 path:'/blogs',

@@ -14,7 +14,7 @@ const Home = () => {
   const [chefsProfile, setChefsProfile] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/chefs")
+    fetch("https://nutsaki-restaurant-server-khaledheera.vercel.app/chefs")
       .then((response) => response.json())
       .then((data) => setChefsProfile(data));
   }, []);
@@ -45,9 +45,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" bg-[#111827] px-14 py-10 ">
+      <div className=" bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800  text-white shadow  px-14 py-10 ">
         <div>
-          <h2 className="font-bold text-2xl text-center text-rose-600">
+          <h2 className="font-bold text-2xl text-center text-amber-300">
             The Korean chefs leading a new era in Seoul's dining scene
           </h2>
         </div>
@@ -59,8 +59,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-[#111827]  px-10 py-10">
-        <h2 className="font-bold text-3xl text-center text-rose-600">Our Shop</h2>
+      <div className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800  text-white shadow   px-10 py-10">
+        <h2 className="font-bold text-3xl text-center text-amber-300">Our Shop</h2>
         <h3 className="text-center font-semibold text-white text-2xl mt-6 p-10">
           Our All Delicious & Tasty Product
         </h3>
@@ -119,7 +119,7 @@ const Home = () => {
        
       </div>
 <div>
-<div className="bg-gray-900 bg-opacity-75 inset-0 px-10 py-10">
+<div className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800  text-white shadow  inset-0 px-10 py-10">
           <h2 className="font-bold text-5xl text-center mt-10 text-amber-300">
             Get 25% Discount
           </h2>

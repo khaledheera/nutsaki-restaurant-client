@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { AiFillLike } from 'react-icons/ai';
 import { toast } from 'react-hot-toast';
+import LazyLoad from 'react-lazy-load';
 
 const ViewRecipes = () => {
   const [fav,setFav]=useState(true)
@@ -17,7 +18,11 @@ console.log(recipes);
         <div >
          
          <div className="card card-side bg-base-100 shadow-xl">
-  <figure><img src={recipes.chefPicture} alt="Movie"/></figure>
+         <LazyLoad height={762} width={400} threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+         <figure><img src={recipes.chefPicture} alt="Movie"/></figure>
+
+    </LazyLoad>
+  
   <div className="card-body">
     <h2 className="card-title">{recipes.chefName}</h2>
     <p>{recipes.description}</p>
@@ -35,7 +40,7 @@ console.log(recipes);
     <h2 className="card-title">{recipes.recipeName1}</h2>
     <p><span className='font-bold'>Ingredients:</span>{recipes.ingredients1}</p>
     <p><span className='font-bold'>Cooking Method:</span>{recipes.cookingMethod1}</p>
-    <p><span className='font-bold'> Rating:</span>{recipes.rating1}</p>
+    <p><span className='font-bold'> Rating: star</span>{recipes.rating1}</p>
     <div  className={`card-actions justify-end ${fav?"block":"hidden"}`}>
       <button onClick={()=>{
         toast.success('This Recipe is My fav')

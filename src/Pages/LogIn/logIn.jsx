@@ -106,7 +106,7 @@ const LogIn = () => {
 	return (
 		<div className="mb-5 login-comp p-10 md:p-20 ">
 			
-			<div className="w-full max-w-md p-6 m-auto mx-auto   rounded-md shadow-md bg-rose-400 ">
+			<div className="w-full max-w-md p-6 m-auto mx-auto   rounded-md text-yellow-100 shadow-md bg-gradient-to-tr from-slate-900 via-rose-900 to-slate-900">
 
 				{errors && <p className="text-center text-xl my-3 text-red-600">{errors}</p>}
 				<h2 className="mb-3 text-3xl font-semibold text-center text-white">Login to your account</h2>
@@ -137,11 +137,7 @@ const LogIn = () => {
 								<label htmlFor="password" className="text-sm">
 									Password
 								</label>
-								<span
-									onClick={handleForgotPassword}
-									className="text-xs hover:underline cursor-pointer dark:text-red-600">
-									Forgot password?
-								</span>
+								
 							</div>
 							<input
 								type={showPass ? 'text' : 'password'}
@@ -154,11 +150,16 @@ const LogIn = () => {
 								onClick={togglePassword}>
 								{showPass ? <AiFillEye /> : <AiFillEyeInvisible />}
 							</span>
+							<span
+									onClick={handleForgotPassword}
+									className="text-xs hover:underline cursor-pointer dark:text-red-600">
+									Forgot password?
+								</span>
 						</div>
 					</div>
 					<button
 						type="submit"
-						className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-400 dark:text-gray-900">
+						className="flex mt-10 items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400 hover:bg-purple-700 duration-500">
 						Login
 					</button>
 					<div className="flex items-center w-full my-4">
@@ -167,18 +168,18 @@ const LogIn = () => {
 						<hr className="w-full dark:text-gray-400" />
 					</div>
 				</form>
-				<div className="my-6 space-y-4">
+				<div className="my-6 space-y-4 ">
 					<button
 						onClick={handleGoogleSignIn}
-						className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 bg-blue-500 rounded-md hover:bg-blue-400 duration-500 focus:bg-blue-400 focus:outline-none ">
+						className="flex mt-10 items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400 hover:bg-purple-700 duration-500">
 						<FaGoogle className="w-5 h-5 " />
-						<p>Login with Google</p>
+						<p>SignIn with Google</p>
 					</button>
 					<button
 						onClick={handleGithubSignIn}
-						className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 bg-blue-500 rounded-md hover:bg-blue-400 duration-500 focus:bg-blue-400 focus:outline-none">
+						className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400 hover:bg-purple-700 duration-500">
 						<FaGithub className="w-6 h-6 " />
-						<p>Login with GitHub</p>
+						<p>SignIn with GitHub</p>
 					</button>
 				</div>
 			</div>
