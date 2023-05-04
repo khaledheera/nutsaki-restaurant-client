@@ -19,7 +19,7 @@ const Home = () => {
       .then((data) => setChefsProfile(data));
   }, []);
   return (
-    <div>
+    <div className="mx-auto ">
       <div className="relative">
         <img
           src={banner}
@@ -52,7 +52,7 @@ const Home = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-5 mt-8">
+        <div className="grid lg:grid-cols-3 gap-5 mt-8 ">
           {chefsProfile.map((chef) => (
             <Chefs key={chef.id} chef={chef}></Chefs>
           ))}
@@ -68,10 +68,17 @@ const Home = () => {
          
         <div className="carousel w-full rounded-box">
   <div id="slide1" className="carousel-item relative w-full">
-    <img src={carousel2} className="w-full" />
+    <img src={carousel1} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide4" className="btn btn-circle">❮</a> 
       <a href="#slide2" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" className="carousel-item relative w-full">
+    <img src={carousel2} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" className="btn btn-circle">❮</a> 
+      <a href="#slide3" className="btn btn-circle">❯</a>
     </div>
   </div> 
   <div id="slide2" className="carousel-item relative w-full">
@@ -84,20 +91,13 @@ const Home = () => {
   <div id="slide2" className="carousel-item relative w-full">
     <img src={carousel4} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" className="btn btn-circle">❮</a> 
-      <a href="#slide3" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide2" className="carousel-item relative w-full">
-    <img src={carousel5} className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide1" className="btn btn-circle"> ❮ </a> 
       <a href="#slide3" className="btn btn-circle"> ❯ </a>
     </div>
   </div> 
   
   <div id="slide3" className="carousel-item relative w-full">
-    <img src={carousel6} className="w-full" />
+    <img src={carousel5} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide2" className="btn btn-circle">❮</a> 
       <a href="#slide4" className="btn btn-circle">❯</a>
