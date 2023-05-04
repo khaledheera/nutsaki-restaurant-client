@@ -19,7 +19,7 @@ console.log(recipes);
         <div className='recipes' >
          
          <div className="card card-side bg-base-100 shadow-xl">
-         <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+         <LazyLoad  threshold={0.95} >
          <figure><img src={recipes.chefPicture} alt="Movie"/></figure>
     </LazyLoad>
 
