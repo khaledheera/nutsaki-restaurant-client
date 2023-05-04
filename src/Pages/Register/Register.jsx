@@ -182,13 +182,13 @@ const Register = () => {
 						onClick={handleGoogleSignIn}
 						className="flex mt-10 items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400 hover:bg-purple-700 duration-500">
 						<FaGoogle className="w-5 h-5 " />
-						<p>SignIn with Google</p>
+						<p>SignUP with Google</p>
 					</button>
 					<button
 						onClick={handleGithubSignIn}
 						className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400 hover:bg-purple-700 duration-500">
 						<FaGithub className="w-6 h-6 " />
-						<p>SignIn with GitHub</p>
+						<p>SignUp with GitHub</p>
 					</button>
 				</div>
 

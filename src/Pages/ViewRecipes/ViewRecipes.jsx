@@ -18,10 +18,10 @@ console.log(recipes);
         <div >
          
          <div className="card card-side bg-base-100 shadow-xl">
-         <LazyLoad height={762} width={400} threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+         <LazyLoad threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
          <figure><img src={recipes.chefPicture} alt="Movie"/></figure>
-
     </LazyLoad>
+
   
   <div className="card-body">
     <h2 className="card-title">{recipes.chefName}</h2>
