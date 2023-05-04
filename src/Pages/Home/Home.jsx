@@ -52,7 +52,7 @@ const Home = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-3 gap-5 mt-8">
+        <div className="grid lg:grid-cols-3 gap-5 mt-8">
           {chefsProfile.map((chef) => (
             <Chefs key={chef.id} chef={chef}></Chefs>
           ))}

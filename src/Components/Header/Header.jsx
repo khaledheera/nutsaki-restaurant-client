@@ -9,7 +9,7 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  // const [darkMode, setDarkMode] = useState(true);
 
   
 
@@ -101,7 +101,7 @@ const Header = () => {
               </button>
               {isMenuOpen && (
                 <div className="absolute top-0 left-0 w-full">
-                  <div className="p-5 bg-white border rounded shadow-sm">
+                  <div className="p-5 bg-rose-400 border rounded shadow-sm">
                     <div className="flex items-center justify-between mb-4">
                       <div>
                         <Link to="/" className="inline-flex items-center">
@@ -126,7 +126,7 @@ const Header = () => {
                         </button>
                       </div>
                     </div>
-                    <nav className={darkMode ? "dark-mode" : "light-mode"}>
+                    <nav >
                       <ul className="space-y-4">
                         
                         <li>

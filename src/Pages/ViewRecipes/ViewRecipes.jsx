@@ -35,7 +35,7 @@ console.log(recipes);
     </div>
   </div>
         </div>
-        <div className='grid grid-cols-3 mt-8'>
+        <div className='grid lg:grid-cols-3 mt-8'>
         <div className="card w-96 bg-base-100 shadow-xl">
   <div className="card-body  bg-gradient-to-tr bg-gradient-to-tr from-amber-300 via-yellow-900 to-amber-300 text-white">
     <h2 className="card-title">{recipes.recipeName1}</h2>
